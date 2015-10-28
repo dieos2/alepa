@@ -1,0 +1,269 @@
+/* CSS Document */
+@import "https://fonts.googleapis.com/css?family=Oswald";
+
+*, html { margin:0 auto;  }
+
+body { background:#fff !important; font-family: Arial, Helvetica, sans-serif !important; }
+
+h1, h2, h3, h4, h5 { font-family: 'Oswald', sans-serif !important; }
+
+img { border:none; }
+
+.largurador { max-width:960px; overflow:hidden; }
+
+
+/* video responsivo */
+.video-responsive {
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.video-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+
+
+
+
+/* topo */
+header {  }
+
+.topo_barra { height:31px; background:#5898bd; border-bottom:1px solid #eee; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif !important; font-size:12px  }
+.topo_barra a { color:#fff; }
+.topo_barra .redes a { display:inline-block; margin:auto 3px; !important; padding-top:6px; }
+.topo_barra .acessibilidade a { display:inline-block; margin:auto 8px; !important; padding-top:8px; }
+
+.topo_fundo { height:167px;  background:url(imagens/topo_fundo.jpg) top center no-repeat; }
+.topo_fundo .logo { margin-left:-165px; }
+
+.topo_menu { background:#eee; }
+.topo_menu .navbar {     margin-bottom: 0; min-height: auto; }
+.topo_menu .navbar-default { background:none !important; border:none !important; box-shadow: none !important; text-transform:uppercase; font-size:14px; font-weight:bold; }
+.topo_menu .nav>li>a { padding-left:10px !important; padding-right:10px !important; }
+.topo_menu .navbar-default .navbar-nav>li>a { color:#000; padding-top:7px; padding-bottom:6px; }
+.topo_menu .navbar-default .navbar-nav>li>a:hover { color:#666; }
+.topo_menu .navbar-default .navbar-nav>.active>a, .topo_menu .navbar-default .navbar-nav>.active>a:focus, .topo_menu .navbar-default .navbar-nav>.active>a:hover { color: #000;    background: #cedae1 !important; } 
+.topo_menu .navbar-form {     margin-top: 4px;     margin-bottom: 4px; }
+.topo_menu .navbar-form .form-control { max-width: 150px; border:none; height: 25px; }
+.topo_menu .btn {
+    display: inline-block;
+    padding: 0;
+    margin-bottom: 0;
+	margin-left:5px;
+    font-size: 20px;
+	background:none;
+}
+
+
+
+
+/* destaque */
+.destaque { background:#5898bd; overflow:hidden; }
+.destaque .rotativo {  color:#fff; }
+.destaque .rotativo h2 { position:absolute; font-size:22px; border-bottom: 1px solid #90bad3;    padding-bottom: 10px; max-width: 200px;    width: 200px; }
+.destaque .rotativo h3 { font-family:Arial, Helvetica, sans-serif !important; text-align:left; margin-left:0; left:0;     text-shadow: none; line-height: 35px; font-weight:500; }
+.destaque .carousel-control.left, .destaque .carousel-control.right { background: none !important; }
+.destaque .carousel-inner>.item>img {   margin-right: 0px; }
+.destaque .carousel-indicators {
+    bottom: auto;	
+    top: 65px;
+	left: 0;
+	margin-left:0;
+	text-align:left;
+}
+.destaque .carousel-indicators.mobile {
+    bottom: auto;	
+    top: 5px;
+	left: 105px;
+	margin-left:0;
+	text-align:left;
+}
+.destaque .carousel-caption { left: 0; top: 55px;     text-align:left; right: auto;  }
+.destaque .carousel-caption.mobile { position:relative; top:-20px;  }
+.destaque .saiba_mais {  padding-bottom: 30px;  }
+.destaque .saiba_mais a { color:#fff; z-index:1; text-shadow: none; font-size:12px; }
+
+
+
+.destaque .multimidia { overflow:hidden; border-left:1px solid #fff;  padding-left:20px;  }
+.destaque .multimidia h2 { color:#fff; font-size:13px; font-family:Arial, Helvetica, sans-serif !important; font-weight:bold !important; padding:2px 0 4px; margin:0; padding-left:30px; margin-bottom:2px; }
+.destaque .multimidia p { text-align:left; font-size:11px; font-weight:100; color:#fff; }
+.destaque .aovivo h2 { background:url(imagens/destaque_aovivo.png) no-repeat 0px 0px; }
+.destaque .radioweb { margin-top:10px; }
+.destaque .radioweb h2 { background:url(imagens/destaque_radio.png) no-repeat 0px 0px; padding-top:4px; }
+.destaque .radioweb .jp-audio {     margin: 0px auto 0px; }
+
+
+
+
+
+/* efeito fade rotativo - início */
+.carousel-fade .carousel-inner .item {
+  -webkit-transition-property: opacity;
+          transition-property: opacity;
+}
+.carousel-fade .carousel-inner .item,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  opacity: 0;
+}
+.carousel-fade .carousel-inner .active,
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+.carousel-fade .carousel-inner .next,
+.carousel-fade .carousel-inner .prev,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+.carousel-fade .carousel-control {
+  z-index: 2;
+}
+html,
+body,
+.carousel,
+.carousel-inner,
+.carousel-inner .item {
+  height: 100%;
+}
+
+/* efeito fade rotativo - fim */
+
+
+
+
+
+/* centro home */
+.centro_home { background:#eee; }
+.centro_home .menu {}
+.centro_home .menu h2 { font-weight:bold; font-size:20px;  margin-top:30px; }
+.centro_home .menu ul { padding:0; margin:0; list-style:none; border-bottom:1px solid #dcdcdc; margin-bottom:20px; padding-bottom:10px;} 
+.centro_home .menu ul li { padding:8px 0; }
+.centro_home .menu ul li a { color:#000; }
+
+.centro_home .menu .comunicacao { border:none; }
+.centro_home .menu .comunicacao li { padding-left:30px; }
+
+
+.centro_home .conteudo {  }
+.centro_home .conteudo h2 { color:#5898bd; font-weight:bold; font-size:20px;  margin-top:30px; border-top:1px solid #dcdcdc; padding-top:15px; }
+.centro_home .conteudo a { color:#000; }
+.centro_home .conteudo a:hover {  }
+
+
+.centro_home .ultimas_noticias .item { background:#fff; overflow:hidden; margin-bottom:20px; }
+.centro_home .ultimas_noticias .item p { padding:10px; }
+
+
+.centro_home .deputados_em_acao .item { margin:10px auto; color:#454545; line-height:15px; }
+.centro_home .deputados_em_acao .image-cropper {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+}
+.centro_home .deputados_em_acao .item span { font-size:13px; margin-left:5px; }
+.centro_home .deputados_em_acao .item .avatar { overflow:hidden; margin-bottom:10px; }
+.centro_home .deputados_em_acao .item .titulo { font-size:14px; font-weight:bold; }
+.centro_home .deputados_em_acao .item .resumo { font-size:13px; }
+
+
+
+.centro_home .outros .item { background:#fff; overflow:hidden; margin-bottom:20px; margin-top:30px;  }
+.centro_home .outros .item h2 { color:#708393; margin-top:0; border-top:none; padding-left: 38px; padding-right:10px; line-height:30px; }
+.centro_home .outros .cac { overflow:hidden; padding:10px 20px; background:#8897a4; }
+.centro_home .outros .cac h3.telefones { color:#fff; font-size:18px; line-height:25px; }
+.centro_home .outros .cac h3.horario { color:#c3dff8; font-size:14px; text-transform:uppercase; }
+
+.centro_home .outros .banco_de_leis { padding:10px 20px 20px; }
+.centro_home .outros .banco_de_leis h3 { margin:10px auto 2px; font-size:14px; font-family:Arial, Helvetica, sans-serif !important; }
+.centro_home .outros .banco_de_leis p { text-align:center;     text-decoration: underline; }
+.centro_home .outros .banco_de_leis .caixa_texto { background:#cbcbcb; border:none; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; padding:5px; width:100%; }
+.centro_home .outros .banco_de_leis .btn { margin:10px auto; border:none; }
+
+
+
+
+
+/* centro deputado */
+.centro_deputado {  }
+
+.centro_deputado .redes { background:#fff; font-size:12px; padding:10px 15px;  }
+.centro_deputado .redes ul { list-style:none; padding:0; margin:0; }
+.centro_deputado .redes ul li { padding:2px 30px 4px; }
+.centro_deputado .redes .facebook { background:url(imagens/dep_face.png) no-repeat 0px 0px; }
+.centro_deputado .redes .twitter { background:url(imagens/dep_twitter.png) no-repeat 0px 0px; }
+.centro_deputado .redes .site { background:url(imagens/dep_site.png) no-repeat 0px 0px; }
+.centro_deputado .redes .email { background:url(imagens/dep_email.png) no-repeat 0px 0px; }
+.centro_deputado .redes a { color:#616161; }
+
+.centro_deputado .nome { background:#5898bd; color:#fff; overflow:hidden; text-transform:uppercase; padding:0px 25px 30px; }
+.centro_deputado .nome h1 { font-size:30px; margin-bottom:0; }
+.centro_deputado .nome p.cargo { font-family:'Oswald', sans-seri; font-size:15px; font-weight:100; }
+
+.centro_deputado .partido_logo { background:#fff; text-align:center;  }
+
+
+
+.centro_deputado .conteudo { background:#ebebeb; }
+
+.centro_deputado .materias {  font-size:12px; padding:10px 15px; overflow:hidden; }
+.centro_deputado .materias h2 { font-weight: bold;    font-size: 20px; color:#000; }
+.centro_deputado .materias p.destaque_rotulo { color:#708393; text-transform:uppercase; font-size:14px; margin-bottom:0; font-weight:bold; }
+.centro_deputado .materias p.destaque_titulo { color:#787878; font-size:12px; line-height:12px; }
+.centro_deputado .materias p.noticia_data { color:#484848; font-weight:bold; font-size:11px; margin-bottom:2px; }
+.centro_deputado .materias p.noticia_titulo { color:#484848; font-size:12px; border-bottom:1px solid #9d9d9d; padding-bottom:10px; margin-bottom:20px; }
+
+.centro_deputado .sobre {     padding-right: 0;    padding-left: 0; }
+.centro_deputado .sobre .foto {}
+.centro_deputado .sobre .bemvindo { background:#5898bd; overflow:hidden; padding:0px 25px 10px; color:#fff; text-transform:uppercase; }
+.centro_deputado .sobre .bemvindo h3 { font-size:16px;  }
+.centro_deputado .sobre .descricao { background:#b9d5e5; overflow:hidden; padding:20px 25px; font-size:12px; }
+
+
+
+
+/* representantes do povo */
+.representantes { background:url(imagens/representantes_fundo.png) repeat-x top center #eeeeee; height:311px; text-align:center;  }
+.representantes .largurador { width:100%; max-width:100%;  }
+.representantes a.filtrar { color:#fff; text-decoration:underline; font-size:11px; }
+.representantes h2 { text-transform:uppercase; color:#fff; font-size:22px;  margin-bottom:5px;    }
+.representantes h3 { font-size:16px !important; margin-top:10px; font-weight:bold; }
+.representantes .item { width:105px; height:225px; display:inline-block !important;  }
+.representantes .lista { max-height: 230px; }
+.representantes .lista a { color:#000; }
+.representantes .lista ul { padding:0; margin:0; list-style:none; margin-top: 10px; }
+.representantes .lista ul li { display:inline-block !important; width:105px !important; height:225px !important;  margin:3px 15px !important;     border: none; }
+
+.representantes .jcarousel-control-prev, .representantes .jcarousel-control-next { top: auto !important; margin-top: 0; background: none;     width: 0px;    height: 0px; font-size:30px; }
+.representantes a.jcarousel-control-prev:visited { color:#fff; text-decoration:none !important; }
+.representantes a.jcarousel-control-prev:hover { text-decoration:none; background:#666; }
+.representantes a.jcarousel-control-next:visited { color:#fff; text-decoration:none !important; }
+.representantes a.jcarousel-control-next:hover { text-decoration:none; background:#666; }
+.representantes .jcarousel-control-prev {
+    left: 50%;
+    margin-left: -145px;
+	text-decoration:none !important;
+}
+.representantes .jcarousel-control-next {
+    right: 50%;
+    margin-right: -115px;
+	text-decoration:none !important;
+}
+
+
+/* rodape */
+footer { background:#2b4b5d; padding:30px 0; text-align:center; color:#fff; }
+footer .atalhos { margin:10px auto 30px; }
+footer .atalhos img { display:inline-block; margin:10px;  }
+footer p { font-size:13px; }
