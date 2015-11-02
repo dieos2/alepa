@@ -1,0 +1,451 @@
+﻿/* ----------------------------------------- */
+/* --- AGENDA PEQUENA (HOME E LATERAL) ----- */
+/* ----------------------------------------- */
+/* PS: Agenda maior possui um css a parte */
+
+/* Slider Home - Agenda */
+#sliderContent { }
+.ui-slider-handle {
+	background: url(imagens/agenda/ponteiro.png) no-repeat;
+}
+
+.viewer-slide-agenda { width:282px; height:180px; overflow:hidden; position:relative; _top: 8px; }
+.content-slide-agenda { width:282px; height:161px; position:relative;} 
+.item-slide-agenda { width:99%; height:180px; overflow: auto; overflow-x:hidden; max-height: 180px; }
+.item-slide-agendaTv { height:156px; width:254px;}
+.slider-selecionado:link { color: #AB0000; }
+.item-slide-agendaTv { height:156px; width:254px;}
+.slide-agendaTv{ width:255px;}
+.content-slide-agendaTv{width:255px;}
+.viewer-slide-agenda{width:255px;}
+.msg-emptyAgendaTv {padding-top: 10px;}
+
+/* Abas */
+
+.agendaHolder .programacao ul {
+	padding:0;
+	margin: 0 0 -1px 0; /* Retroceder e tampar o border-top do box-formulario-padrao  */
+	
+	position: relative;
+	
+	/*background:url(/opencms/export/system/modules/br.gov.almg.site.portal/resources/img/abas/tabsidecal_base.gif) 0 100% repeat-x;*/
+	/*background:url(imagens/agenda/tab-preview.gif) 50% 50% no-repeat; /* falso loading, some no js */*/
+	
+	width:100%;
+	height:31px; /* AltSideCalFULL */
+	overflow:hidden;
+
+	vertical-align:middle;
+}
+	.agendaHolder .programacao ul *{
+		vertical-align:middle;
+	}
+	
+
+.agendaHolder .programacao ul li {
+	visibility:hidden; /* sera visivel no inc_agenda_lateral.jsp */
+	
+	float:left;display:inline; line-height: 100%;
+
+	
+	padding:0;
+	margin:10px 0 0 0; /* Valor restante para AltSideCalOFF se tornar AltSideCalFULL */
+	height:21px; /* AltSideCalOFF */
+	overflow:hidden;
+	
+	/*border-bottom:1px solid #d2d2c6;*/
+}
+
+.agendaHolder .programacao ul li a {	
+	display:block; line-height: 100%;
+	
+	height:15px; padding-top:6px; /* AltSideCalOFF */
+	/* bckup (ideal, mas nao funciona no ie): height:21px; padding-top:0; display:table-cell; vertical-align:middle; */ /* AltSideCalOFF */
+	
+	overflow:hidden;
+
+	font-size: 11px;
+	font-weight: bold;
+	color: #fff;
+	cursor:pointer;
+	text-decoration:none;
+	text-transform:uppercase;
+	text-align:center;
+	/* largura no inc_agenda_lateral.jsp */
+
+	
+}
+
+.agendaHolder .programacao ul li a:hover {
+	text-decoration:none;
+	color: #393845;
+}
+
+.agendaHolder .programacao ul li.select {
+	margin:10px 0 0 0;
+	padding:0;
+	height:22px; /* AltSideCalFULL */
+
+	background:url(imagens/agenda/tabsidecal_esq2.gif) 0 0 no-repeat;
+	/*border-bottom:1px solid #fcfcfb;*/
+}
+
+.agendaHolder .programacao ul li.select a {
+    display: block;
+
+	height:21px; padding-top:8px; /* AltSideCalFULL */
+	/* bckup (ideal, mas nao funciona no ie): height:31px; padding-top:0; display:table-cell; vertical-align:middle;*/ /* AltSideCalFULL */
+
+    font-size: 11px;
+    font-weight: bold;
+	color: #393845;
+
+	background:url(imagens/agenda/tabsidecal_dir2.gif) 100% 0 no-repeat;
+}
+
+
+/* Horas */
+
+.agendaHolder .programacao_regua {
+	z-index: 100;
+	background: url(imagens/agenda/bg-fundo.gif) 0 0 repeat-x;
+	text-align:center;
+	height:28px;
+	padding:10px 0 6px 0
+}
+
+.agendaHolder .programacao_regua .programacao_reguaHoras {
+	display: none;
+}
+
+.agendaHolder .programacao_regua span {
+	display: inline-block;
+	height:21px; /* altSideCalRule */
+	width:31px;
+}
+	.agendaHolder .programacao_regua .programacao_reguaHorasManha span { width:41px; }
+	.agendaHolder .programacao_regua .programacao_reguaHorasTarde span { width:31px; }
+	.agendaHolder .programacao_regua .programacao_reguaHorasNoite span { width:31px; }
+
+	/* Exclusivo da home: */
+	#agenda-home .agendaHolder .programacao_regua .programacao_reguaHorasManha span { width:47px; }
+	#agenda-home .agendaHolder .programacao_regua .programacao_reguaHorasTarde span { width:37px; }
+	#agenda-home .agendaHolder .programacao_regua .programacao_reguaHorasNoite span { width:37px; }
+
+
+.agendaHolder .programacao_regua a {
+	display:block;
+	height:21px; /* altSideCalRule */
+    	cursor: default;
+}
+
+.agendaHolder .programacao_regua a.select {
+	background: url(imagens/agenda/ponteiro.png) center 100% no-repeat;
+	color: #2b4b5d;
+    font-weight: 600;
+}
+
+
+
+/* Esteira */ 
+.agendaHolder .wrapper {overflow: hidden;}
+
+.agendaHolder .programacao {}
+
+#agenda-home .agendaHolder .programacao {
+	float:left;
+}
+
+.agendaHolder .programacao_slider {float: left;}
+
+.agendaHolder .evento {
+	float: left;
+	width: 100%;
+	/*height: 250px;*/
+	height:auto;
+    color:#555555;
+    display: block;
+}
+
+.agendaHolder .notice {
+	font-size: 14px; padding: 10px 0px;
+}
+
+.agendaHolder .footer {
+	display: block;
+    height: 25px;
+    border: 1px solid #494949;
+    background: #8897A4;
+    margin: 0 0 28px 0;
+    /* width: 244px !important; */
+}
+	#agenda-home .agendaHolder .footer { /* Exclusivo da home */
+		margin:0;
+		width: 302px !important;
+		
+	}
+
+.paginacao_agenda {
+	float: right;
+}
+	.paginacao_agenda a {
+		float: left;
+		display:block;
+		height:23px;
+		width:24px;
+		overflow:hidden;
+		background:url(imagens/agenda/sidecal_nav.gif) 0 0 no-repeat;
+		text-indent:-999px;
+		cursor:default;
+	}
+	.paginacao_agenda a.paginacao_agendaPrev {
+		background-position:0 0;
+	}
+		.paginacao_agenda a.paginacao_agendaPrev.active {
+			background-position:0 -25px;
+			cursor:pointer;
+		}
+	.paginacao_agenda a.paginacao_agendaNext {
+		background-position:-24px 0;
+	}
+		.paginacao_agenda a.paginacao_agendaNext.active {
+			background-position:-24px -25px;
+			cursor:pointer;
+		}
+
+.agendaHolder .footer .btn-ver {
+	float: left;
+	padding: 4px;
+}
+
+.agendaHolder .footer .btn-ver a {
+	text-decoration:none;
+}
+
+.agendaHolder .footer .btn-ver a:hover {
+	text-decoration:underline;
+}
+
+.agendaHolder .vazioManha,
+.agendaHolder .vazioTarde,
+.agendaHolder .vazioNoite {
+	font-size: 14px;
+	font-weight: bold;
+	height: 450px;
+	padding: 20px 20px 0 20px;
+	text-align: center;
+	width: 213px;
+}
+	#agenda-home .agendaHolder .vazioManha,
+	#agenda-home .agendaHolder .vazioTarde,
+	#agenda-home .agendaHolder .vazioNoite { /* Exclusivo da home: */
+		width: 253px;
+	}
+    /********* AGENDA **********/
+.mudar-dataAgenda  {
+	display: block;
+	padding-left: 20px;
+	color: #ab0000;
+	font-weight: bold;
+	text-decoration: none;
+	clear: both;
+	margin: 0 0 0 175px;
+}
+
+
+.bg-conteudoAgenda .wrapper {
+	height:185px;
+	width:244px;
+	position:relative;
+}
+	#agenda-home .bg-conteudoAgenda .wrapper {
+		width:293px !important;
+	}
+
+.bg-conteudoAgenda {
+	display: block;
+	border: 1px solid #c5c5c5;
+	border-top: none;
+	border-bottom: none;
+	background: #E8EAEC url(imagens/agenda/bg-fundo.gif) 0 0 repeat-x;
+}
+#agenda-home .bg-conteudoAgenda {
+
+}
+
+.bg-horario{
+	background: url(imagens/agenda/bg-hora.gif) 0 0 no-repeat;
+	width: 50px;
+	height: 16px;
+	float: left;
+	margin: 5px 5px 0 0;
+	line-height:0;
+	font-size:0;
+	padding:0;
+}
+.horas{
+	font-family:Verdana, Geneva, sans-serif;
+	color:#fff;
+	font-size:11px;
+	margin:0 0 0 8px;
+	line-height:15px;
+}
+.programacao_regua ul {
+	display: block;
+	padding: 11px 0 0 18px;
+	background: none;
+}
+.programacao_regua ul li a{
+	color: #797979;
+	font-family: Verdana,Geneva,sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	text-transform: none;
+	text-decoration: none;
+}
+
+.programacao_regua  {
+	border-bottom:1px solid #2b4b5d;
+	margin:auto;
+	text-align:center;
+}
+
+.programacao_regua span {
+	background:none;
+	border:none;
+	font-size: 10px !important;
+	margin:0 0 6px 4px;
+}	
+
+.programacao_regua span a{
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 9px !important;
+	font-weight: normal;
+	text-transform: none;
+	color: #797979;
+	text-decoration: none;
+}
+
+.programacao_regua ul li {
+	float:left;
+	margin:0 7px 0 0;	
+}
+.texto-horarioAgendaTv {
+	display:inline;
+	float:left;
+	/*height:21px;*/
+	margin-bottom:0;
+	margin-left:6px;
+	margin-right:0;
+	margin-top:16px;
+	width:240px;
+}
+#agenda-home .texto-horarioAgendaTv {
+   width:280px;
+}
+#agenda-home .horario-conteudoAgendaTv {
+   width:220px;
+} 
+.horario-conteudoAgendaTv{
+	color:#555555;
+	float:left;
+	width:179px;
+	margin:3px 0 0 0;
+}
+
+.horario-conteudoAgendaTv p{
+	margin: 0 0 10px 0;
+}
+
+.horario-conteudoAgendaTv img{
+	vertical-align:middle;
+}
+
+
+.itens-agendaProgramacao{
+	width:252px;
+	float:left;
+	margin:10px 0 20px 0;
+}
+.btn-outrasFormasAgenda{
+	background:url(imagens/agenda/bg-outrasFormas.gif) 0 0 repeat-x;
+	height:24px;
+	float:left;
+	width:244px;
+	padding:5px 0 0 10px;
+}
+.btn-outrasFormasAgenda a{
+	color:#444749;
+	text-decoration:none;
+	font-weight:bold;
+}
+.iterno-vejaTambemTv{
+	background:url(imagens/agenda/bg-veja-tambem.gif) 0 -31px repeat-x;
+	width:253px;
+	overflow:hidden;
+	border:1px solid #c5c5c5;
+	margin:15px 0 20px 0;
+	padding:0 0 10px 0;
+}
+.texto-vejaTambemTv{
+	margin:5px 0 0 10px;	
+}
+.texto-vejaTambemTv img{
+	margin:0 5px 0 0;
+}
+.texto-vejaTambemTv a{
+	font-size:12px;
+	font-weight:bold;
+	color:#555;
+	text-decoration:none;
+}
+.internoSobreProgramas{
+}
+.textoInternoProgramas{
+}
+.no-border{
+	border-bottom:none;
+}
+.btn-saiba-mais-Programacao{
+	background:url(imagens/agenda/bg-saibamais.gif) 0 0 no-repeat;
+	width:70px;
+	height:16px;
+	float:left;
+	margin:3px 0 0 0;
+}
+.btn-saiba-mais-Programacao a{
+	color:#fff;
+	text-decoration:none;
+	text-transform:capitalize;
+	font-family:Verdana, Geneva, sans-serif;
+	margin:0 0 0 4px;
+}
+.internoPerguntasTv{
+	width:243px;
+	border:1px solid #c5c5c5;
+	float:left;
+	padding:15px 0 0 9px;
+	background-color:#fff;
+	margin:15px 0 0 0;
+}
+.internoPerguntasTv img{
+	margin:0 10px 0 0;
+	float:left;
+}
+.textoPerguntas a{
+	text-decoration:none;
+	color:#555;
+}
+.todasPerguntasTv{
+	float:left;
+	width:242px;
+	background-color:#fff;
+	border:1px solid #c5c5c5;
+	border-top:none;
+	padding:5px;
+}
+.todasPerguntasTv a{
+	color:#555;
+	margin:0 0 0 5px;
+	text-decoration:none;
+}
